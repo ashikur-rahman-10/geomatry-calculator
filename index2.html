@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .boxs {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxs">
+      <div class="box">
+        <h1>Box 1</h1>
+      </div>
+      <div class="box">
+        <h1>Box 2</h1>
+      </div>
+      <div class="box">
+        <h1>Box 3</h1>
+      </div>
+      <div class="box">
+        <h1>Box 4</h1>
+      </div>
+      <div class="box">
+        <h1>Box 5</h1>
+      </div>
+    </div>
+
+    <script>
+      // add random background color on hover
+      const boxs = document.querySelectorAll('.box');
+      boxs.forEach((box) => {
+        box.addEventListener('mouseenter', () => {
+          box.style.backgroundColor = `rgb(${Math.floor(
+            Math.random() * 255
+          )}, ${Math.floor(Math.random() * 255)}, ${Math.floor(
+            Math.random() * 255
+          )})`;
+        });
+      });
+    </script>
+  </body>
+</html>
